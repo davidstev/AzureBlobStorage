@@ -1,22 +1,11 @@
 ﻿using Azure.Storage.Blobs;
 
-// Azure SDK
-// BlobServiceClient (Storage Account) used to acccess BlobContainerClient (Folders) Which can then access the BlobClient (Files)
-
 namespace BlobStorage
 {
     internal class AzureBlobStorage
     {
-
+        // Update the following 2 values
         private readonly string _storageAccount = "";
-        // _accessKey this is the most insecure method of authentication where a key is stored in vault and passed to authenticate.
-        // Also available is
-        
-        // Azure AD
-        //Create Service Principle to access Storage Account.You need to register application.
-
-       //Shared Access Signatures
-       //Allows granular access to storage account.Access to specific areas, for specific people, for specific time.
         private readonly string _accessKey = "";
         private readonly BlobServiceClient _blobServiceClient;
         private const string ContainerName = "files";
